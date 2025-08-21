@@ -30,7 +30,7 @@ It demonstrates how to deploy a webpage on EC2 by installing a web server, confi
 
 3. **Install Apache(httpd)**
 
-   - sudo dnf update -y → Updating the operating system.
+   - \*\*sudo dnf update -y\*\* → Updating the operating system.
    - sudo dnf install -y httpd → Installs the Apache web server (httpd) package
    - sudo systemctl start httpd → Starts the Apache service immediately (so it begins serving web pages).
    - sudo systemctl enable httpd → Configures Apache to start automatically on boot.

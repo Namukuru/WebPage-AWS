@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My EC2 Website</title>
+    <meta
+      name="description"
+      content="A static website hosted on Amazon EC2 with Apache"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f6f8;
+        color: #333;
+        text-align: center;
+        line-height: 1.6;
+      }
+      header {
+        background: #232f3e;
+        color: white;
+        padding: 1.5rem;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 2rem;
+      }
+      main {
+        padding: 2rem;
+        max-width: 800px;
+        margin: auto;
+      }
+      section {
+        margin-bottom: 2rem;
+      }
+      .btn {
+        display: inline-block;
+        background: #ff9900;
+        color: white;
+        padding: 0.7rem 1.5rem;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background 0.3s;
+      }
+      .btn:hover {
+        background: #cc7a00;
+      }
+      footer {
+        background: #eee;
+        padding: 1rem;
+        font-size: 0.9rem;
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to My EC2 Website ⚡</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>About This Site</h2>
+        <p>
+          This static website is running on an
+          <strong>Amazon EC2 instance</strong>. The web server (Apache/Nginx)
+          serves this page directly from the
+          <code>/var/www/html</code> directory.
+        </p>
+      </section>
+
+      <section>
+        <h2>How It Works</h2>
+        <ul style="text-align: left; max-width: 600px; margin: auto">
+          <li>Launch an EC2 instance (Amazon Linux or Ubuntu)</li>
+          <li>Install Apache or Nginx to serve web content</li>
+          <li>Configure Security Groups to allow HTTP traffic (port 80)</li>
+          <li>Upload website files to <code>/var/www/html</code></li>
+          <li>Access the site via the EC2 Public IP or domain name</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Get Started</h2>
+        <p>
+          Hosting on EC2 is perfect for learning Linux, configuring servers, and
+          running small-scale web projects with full control over your
+          environment.
+        </p>
+        <a
+          class="btn"
+          href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Learn More</a
+        >
+      </section>
+    </main>
+
+    <footer>&copy; <span id="year"></span> My EC2 Website</footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

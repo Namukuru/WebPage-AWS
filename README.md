@@ -30,17 +30,17 @@ It demonstrates how to deploy a webpage on EC2 by installing a web server, confi
 
 3. **Install Apache(httpd)**
 
-   - \*\*sudo dnf update -y\*\* → Updating the operating system.
-   - sudo dnf install -y httpd → Installs the Apache web server (httpd) package
-   - sudo systemctl start httpd → Starts the Apache service immediately (so it begins serving web pages).
-   - sudo systemctl enable httpd → Configures Apache to start automatically on boot.
+   - **sudo dnf update -y** → Updating the operating system.
+   - **sudo dnf install -y httpd** → Installs the Apache web server (httpd) package
+   - **sudo systemctl start httpd** → Starts the Apache service immediately (so it begins serving web pages).
+   - **sudo systemctl enable httpd** → Configures Apache to start automatically on boot.
 
 4. **Configure Permissions**
 
-   - sudo usermod -a -G apache ec2-user → Adds ec2-user to the apache group so it can work with web files.
-   - sudo chown -R ec2-user:apache /var/www → Changes ownership of /var/www so ec2-user is the owner and apache is the group.
-   - sudo chmod 2775 /var/www → Sets permissions on /var/www so owner and group can read/write/execute, and new files inherit the apache group.
-   - find /var/www -type d -exec sudo chmod 2775 {} \; → Applies those same permissions to all subdirectories inside /var/www.
+   - **sudo usermod -a -G apache ec2-user** → Adds ec2-user to the apache group so it can work with web files.
+   - **sudo chown -R ec2-user:apache /var/www** → Changes ownership of /var/www so ec2-user is the owner and apache is the group.
+   - **sudo chmod 2775 /var/www** → Sets permissions on /var/www so owner and group can read/write/execute, and new files inherit the apache group.
+   - **find /var/www -type d -exec sudo chmod 2775 {} \;** → Applies those same permissions to all subdirectories inside /var/www.
 
 5. **Deploy Your Webpage**
 

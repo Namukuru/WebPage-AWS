@@ -8,7 +8,7 @@ It demonstrates how to deploy a webpage on EC2 by installing a web server, confi
 
 ### Homepage
 
-  <img src="screenshots/webPage.png" width="600">
+  <img src="Screenshots/webPage.png" width="600">
 
 </details>
 
